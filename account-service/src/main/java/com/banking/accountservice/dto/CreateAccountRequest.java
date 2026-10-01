@@ -1,5 +1,6 @@
 package com.banking.accountservice.dto;
 
+import com.banking.accountservice.entity.AccountType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -27,7 +28,7 @@ public class CreateAccountRequest {
 
 
     @NotNull(message ="Account type is required")
-    private String accountType;
+    private AccountType accountType;
 
     @NotNull(message ="Initial deposite is required")
     @Positive(message = "Initial deposit must be a positive value")
